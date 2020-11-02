@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dw-chart/dw-chart.iml" filepath="$PROJECT_DIR$/dw-chart/dw-chart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-190408.iml" filepath="$PROJECT_DIR$/gmall-190408.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-canel/gmall-canel.iml" filepath="$PROJECT_DIR$/gmall-canel/gmall-canel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-common/gmall-common.iml" filepath="$PROJECT_DIR$/gmall-common/gmall-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-logger/gmall-logger.iml" filepath="$PROJECT_DIR$/gmall-logger/gmall-logger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-mock/gmall-mock.iml" filepath="$PROJECT_DIR$/gmall-mock/gmall-mock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-publish-demo/gmall-publish-demo.iml" filepath="$PROJECT_DIR$/gmall-publish-demo/gmall-publish-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-relatime/gmall-relatime.iml" filepath="$PROJECT_DIR$/gmall-relatime/gmall-relatime.iml" />
+    </modules>
+  </component>
+</project>

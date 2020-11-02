@@ -1,0 +1,51 @@
+package com.atguigu.utils;
+
+import java.io.OutputStream;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class LogUploader {
+
+    public static void sendLogStream(String log) {
+
+        HttpURLConnection conn = null;
+        try {
+            //不同的日志类型对应不同的URL，
+            //本地测试
+            //URL url = new URL("http://localhost:8080/log");
+
+            //linux单台测试
+            //URL url = new URL("http://hadoop102:8080/log");
+
+            //Nginx集群测试
+            URL url = new URL("http://hadoop102/log");
+
+            conn = (HttpURLConnection) url.openConnection();
+
+            //设置请求方式为post
+            conn.setRequestMethod("POST");
+
+            //时间头用来供server进行时钟校对的
+            conn.setRequestProperty("clientTime", System.currentTimeMillis() + "");
+            //允许上传数据
+            conn.setDoOutput(true);
+            //设置请求的头信息,设置内容类型为JSON
+            conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+
+            System.out.println("upload" + log);
+
+            //输出流
+            OutputStream out = conn.getOutputStream();
+            out.write(("logString=" + log).getBytes());
+            out.flush();
+            out.close();
+            int code = conn.getResponseCode();
+            System.out.println(code);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            conn.disconnect();
+        }
+    }
+}
